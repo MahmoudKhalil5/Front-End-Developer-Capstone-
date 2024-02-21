@@ -69,30 +69,8 @@ function Main(){
                         <h1>Testimonials</h1>
                     </div>
                     <div className={Styles.revCont}>
-                        <div className={Styles.Review}>
-                            <img className={Styles.rat} src={StarImage} alt=""/>
-                            <img className={Styles.pro} src={MaleImage} alt=""/>
-                            <h2>Name</h2>
-                            <p>customer feedback </p>
-                        </div>
-                        <div className={Styles.Review}>
-                            <img className={Styles.rat} src={StarImage} alt=""/>
-                            <img className={Styles.pro} src={FemaleImage} alt=""/>
-                            <h2>Name</h2>
-                            <p>customer feedback </p>
-                        </div>
-                        <div className={Styles.Review}>
-                            <img className={Styles.rat} src={StarImage} alt=""/>
-                            <img className={Styles.pro} src={MaleImage} alt=""/>
-                            <h2>Name</h2>
-                            <p>customer feedback </p>
-                        </div>
-                        <div className={Styles.Review}>
-                            <img className={Styles.rat} src={StarImage} alt=""/>
-                            <img className={Styles.pro} src={FemaleImage} alt=""/>
-                            <h2>Name</h2>
-                            <p>customer feedback </p>
-                        </div>
+
+
                     </div>
                 </div>
                 <div className={Styles.about}>
@@ -106,6 +84,7 @@ function Main(){
                         <img className={Styles.resturant} src={RestaurantImage} width={250} height={300} alt=""/>
                     </div>
                 </div>
+
         </main>
     );
 }

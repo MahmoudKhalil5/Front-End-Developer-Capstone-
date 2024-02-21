@@ -1,12 +1,12 @@
 import React from 'react';
 import Styles from './Footer.module.css';
-import LogoImage from './logo.jpg';
+import Logo from './logo.jpg';
 
 function Footer(){
     return(
         <footer className={Styles.Footer}>
             <div className={Styles.columnOne}>
-                <img src={LogoImage} alt=""/>
+                <img src={Logo} alt=""/>
             </div>
 
             <div className={Styles.columnTwo}>
