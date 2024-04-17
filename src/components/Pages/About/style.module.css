@@ -1,0 +1,39 @@
+
+.about{
+display: flex;
+flex-wrap: wrap;
+width:100%;
+height: auto;
+padding: 3em 0;
+}
+.Acontent{
+    width: 40%;
+    margin-left: 7em;
+    margin-top: 5em;
+}
+.Acontent p {
+    font-family: "Karla", sans-serif;
+    font-size: 18px;
+    line-height: 1.7em;
+    color: #000;
+    margin-top: -1em;
+}
+.owner{
+    width: 50%;
+}
+.chefs{
+    width: 50%;
+    height: 60%;
+    margin-top: 1em;
+    margin-left: 10em;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0 , 0.2);
+    border-radius: 15px;
+}
+.resturant{
+    width: 40%;
+    height: 60%;
+    margin-top: -10em;
+    margin-left: 2em;
+    box-shadow: 3px 3px 15pz rgba(0, 0, 0 , 0.2);
+    border-radius: 15px;
+}
