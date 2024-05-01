@@ -11,6 +11,8 @@ import OrderOnline from "./components/Pages/OrderOnline";
 import Login from "./components/Pages/Login";
 import BookingPage from "./components/Pages/Booking/index";
 import ConfirmationBookingPage from "./components/Pages/Booking/ConfirmedBooking";
+import Booking from './components/Pages/Booking/index'
+import Main from './components/Pages/Home/index'
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/" exact element={<Home />} />
         <Route path="/Menu" element={<Menu />} />
+        <Route path="/" element={<Main />} />
+        <Route path="/booking" element={<Booking />} />
         <Route path="/Booking" element={<BookingPage />} />
         <Route path="/OrderOnline" element={<OrderOnline />} />
         <Route path="/Login" element={<Login />} />

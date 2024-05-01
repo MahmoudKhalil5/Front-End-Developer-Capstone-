@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ConfirmationBookingPage.css';
 
 function BookingForms({ availableTimes, dispatchOnDateChange, submitData }) {
@@ -17,10 +16,10 @@ function BookingForms({ availableTimes, dispatchOnDateChange, submitData }) {
   const isOccasionValid = () => occasion !== '';
 
   const areAllFieldsValid = () => 
-    isDateValid() 
-    && isTimeValid() 
-    && isNumberOfGuestsValid() 
-    && isOccasionValid();
+       isDateValid() && 
+       isTimeValid() && 
+       isNumberOfGuestsValid() && 
+       isOccasionValid();
     const handleFormSubmit = (e) => {
         e.preventDefault();
         submitData({ date, time, numberOfGuests, occasion });
@@ -66,6 +65,8 @@ function BookingForms({ availableTimes, dispatchOnDateChange, submitData }) {
       value={date}
       required
       onChange={handleDateChange}
+      data-testid="date-input"
+
     />
   </div>
 
@@ -77,6 +78,7 @@ function BookingForms({ availableTimes, dispatchOnDateChange, submitData }) {
       value={time}
       required
       onChange={handleTimeChange}
+      data-testid="time-select"
     >
       {availableTimes.map((timeOption) => (
         <option key={timeOption}>{timeOption}</option>
@@ -95,6 +97,7 @@ function BookingForms({ availableTimes, dispatchOnDateChange, submitData }) {
       value={numberOfGuests}
       required
       onChange={(e) => setNumberOfGuests(parseInt(e.target.value))}
+      data-testid="guests-input"
     />
   </div>
 
@@ -106,6 +109,7 @@ function BookingForms({ availableTimes, dispatchOnDateChange, submitData }) {
       value={occasion} 
       required
       onChange={e => setOccasion(e.target.value)}
+      data-testid="occasion-select"
     >
       {['Birthday', 'Anniversary'].map((occasionOption) => 
         <option key={occasionOption}>{occasionOption}</option>
@@ -118,6 +122,7 @@ function BookingForms({ availableTimes, dispatchOnDateChange, submitData }) {
     id="submit-button" 
     type="submit" 
     disabled={!areAllFieldsValid()}
+    data-testid="submit-button"
   >
     Make your reservation
   </button>
