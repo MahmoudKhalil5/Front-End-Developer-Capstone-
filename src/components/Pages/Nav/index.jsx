@@ -18,7 +18,6 @@ function Nav(){
                     <li><Link className={styles.a} to="/Booking">Reservations</Link></li>
                     <li><Link className={styles.a} to="/OrderOnline">Order Online</Link></li>
                     <li><Link className={styles.a} to="/Login">Login</Link></li>
-                    <li><Link className={styles.a} to="/booking-confirmed">Confirmation</Link></li> {/* Add a link to the confirmation page */}
                 </ul>
             </div>
         </nav>
