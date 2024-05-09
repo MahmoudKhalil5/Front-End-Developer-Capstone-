@@ -1,6 +1,7 @@
 import React from 'react';
 import Styles from './Style.module.css';
 import { useNavigate } from 'react-router-dom';
+import About from '../About';
 
 const Testimonials= [{
     rate:5,
@@ -40,6 +41,9 @@ function Main(){
     const handleReserveClick = () => {
         navigate('/Booking');
       };
+      const handleOnlineMenuClick = () => {
+        navigate('/onlineMenu'); // Navigate to the online menu page
+      };
     return(
         <main role="main" aria-label="Main Content">
             {/* Main Content Section */}
@@ -48,7 +52,7 @@ function Main(){
                     <h1>Lettle Lemon</h1>
                     <h2>Chicago</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <button 
+                    <button className={Styles.Mbot}
                         onClick={handleReserveClick} aria-label="Reserve a Table">
                         Reserve a Table
                     </button>
@@ -63,7 +67,7 @@ function Main(){
             <header className={Styles.Specials}>
              <div className={Styles.SH}>
               <h1>Specials</h1>
-              <button aria-label="View Online Menu">Online Menu</button>
+              <button onClick={handleOnlineMenuClick} aria-label="View Online Menu">Online Menu</button>
              </div>
             </header>
 
@@ -97,6 +101,7 @@ function Main(){
                     ))}
                 </div>
             </section>
+            <About />
         </main>
     );
 }

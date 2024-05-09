@@ -53,81 +53,81 @@ function BookingForms({ availableTimes, dispatchOnDateChange, submitData }) {
         setTime(e.target.value);
 
     return (
-        <div>
-            <form onSubmit={handleFormSubmit} className="booking-form">
-  {/* Date Input */}
-  <div className="form-group">
-    <label htmlFor="booking-date">Choose date</label>
-    <input
-      type="date"
-      id="booking-date"
-      min={minimumDate}
-      value={date}
-      required
-      onChange={handleDateChange}
-      data-testid="date-input"
+    <div>
+      <form onSubmit={handleFormSubmit} className="booking-form">
+      {/* Date Input */}
+      <div className="form-date">
+        <label htmlFor="booking-date">Choose date</label>
+        <input
+          type="date"
+          id="booking-date"
+          min={minimumDate}
+          value={date}
+          required
+          onChange={handleDateChange}
+          data-testid="date-input"
 
-    />
-  </div>
+        />
+      </div>
 
-  {/* Time Select */}
-  <div className="form-group">
-    <label htmlFor="booking-time">Choose time</label>
-    <select 
-      id="booking-time"
-      value={time}
-      required
-      onChange={handleTimeChange}
-      data-testid="time-select"
-    >
-      {availableTimes.map((timeOption) => (
-        <option key={timeOption}>{timeOption}</option>
-      ))}
-    </select>
-  </div>
+      {/* Time Select */}
+      <div className="form-time">
+        <label htmlFor="booking-time">Choose time</label>
+        <select 
+          id="booking-time"
+          value={time}
+          required
+          onChange={handleTimeChange}
+          data-testid="time-select"
+        >
+          {availableTimes.map((timeOption) => (
+            <option key={timeOption}>{timeOption}</option>
+          ))}
+        </select>
+      </div>
 
-  {/* Number of Guests Input */}
-  <div className="form-group">
-    <label htmlFor="guests">Number of guests</label>
-    <input
-      type="number"
-      min={1}
-      max={10}
-      id="guests"
-      value={numberOfGuests}
-      required
-      onChange={(e) => setNumberOfGuests(parseInt(e.target.value))}
-      data-testid="guests-input"
-    />
-  </div>
+      {/* Number of Guests Input */}
+      <div className="form-guests">
+        <label htmlFor="guests">Number of guests</label>
+        <input
+          type="number"
+          min={1}
+          max={10}
+          id="guests"
+          value={numberOfGuests}
+          required
+          onChange={(e) => setNumberOfGuests(parseInt(e.target.value))}
+          data-testid="guests-input"
+        />
+      </div>
 
-  {/* Occasion Select */}
-  <div className="form-group">
-    <label htmlFor="occasion">Occasion</label>
-    <select 
-      id="occasion" 
-      value={occasion} 
-      required
-      onChange={e => setOccasion(e.target.value)}
-      data-testid="occasion-select"
-    >
-      {['Birthday', 'Anniversary'].map((occasionOption) => 
-        <option key={occasionOption}>{occasionOption}</option>
-      )}
-    </select>
-  </div>
+      {/* Occasion Select */}
+      <div className="form-occasion">
+        <label htmlFor="occasion">Occasion</label>
+        <select 
+          id="occasion" 
+          value={occasion} 
+          required
+          onChange={e => setOccasion(e.target.value)}
+          data-testid="occasion-select"
+        >
+          {['Birthday', 'Anniversary'].map((occasionOption) => 
+            <option key={occasionOption}>{occasionOption}</option>
+          )}
+        </select>
+      </div>
 
-  {/* Submit Button */}
-  <button 
-    id="submit-button" 
-    type="submit" 
-    disabled={!areAllFieldsValid()}
-    data-testid="submit-button"
-  >
-    Make your reservation
-  </button>
-</form>
-        </div>
+      {/* Submit Button */}
+      <button 
+        class="fill" 
+        type="submit" 
+        disabled={!areAllFieldsValid()}
+        data-testid="submit-button"
+      >
+        Make your reservation
+      </button>
+      </form>
+    </div>
     );
 }
 

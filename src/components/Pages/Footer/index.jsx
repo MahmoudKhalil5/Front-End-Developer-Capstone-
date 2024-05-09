@@ -1,44 +1,43 @@
 import React from 'react';
-import Styles from './Footer.module.css';
-import Logo from './logo.jpg';
+import styles from './footer.module.css';
+import logo from './logo.jpg';
 
-function Footer(){
-    return(
-        <footer className={Styles.Footer}>
-            <div className={Styles.columnOne}>
-                <img src={Logo} alt=""/>
-            </div>
-
-            <div className={Styles.columnTwo}>
-                <ul>
-                    <h4>Navigation</h4>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Menu</li>
-                    <li>Reservations</li>
-                    <li>Oder Online</li>
-                    <li>Login</li>
-                </ul>
-            </div>
-
-            <div className={Styles.columnThree}>
-                <ul>
-                    <h4>Contact</h4>
-                    <li>Phone Number</li>
-                    <li>Email</li>
-                    <li>Address</li>
-                </ul>
-            </div>
-
-            <div className={Styles.columnfour}>
-                <ul>
-                    <h4>Social Media</h4>
-                    <li>instaram</li>
-                    <li>Linkedin</li>
-                </ul>
-            </div>
-
-        </footer>
+function Footer() {
+    return (
+      <footer className={styles.footer}>
+        <div className={styles.column}>
+          <img src={logo} alt="Company Logo" className={styles.logo} />
+        </div>
+        <div className={styles.column}>
+          <ul>
+            <h5 className={styles.heading}>Contact</h5>
+            <li>Phone:<a>+1 123-456-7890</a></li>
+            <li>Email: <a>contact@company.com</a></li>
+            <li>Address: <a>123 Main St, Anytown, USA</a></li>
+          </ul>
+        </div>
+        <div className={styles.column}>
+          <ul>
+            <h5 className={styles.heading}>Social Media</h5>
+            <li>
+              <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                Facebook
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     );
-}
-export default Footer;
+  }
+  
+  export default Footer;

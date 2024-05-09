@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from "./components/Header";
 import Nav from "./components/Pages/Nav";
 import Footer from "./components/Pages/Footer";
@@ -13,6 +13,7 @@ import BookingPage from "./components/Pages/Booking/index";
 import ConfirmationBookingPage from "./components/Pages/Booking/ConfirmedBooking";
 import Booking from './components/Pages/Booking/index'
 import Main from './components/Pages/Home/index'
+import ScrollToTopButton from './components/Pages/ScrollToTopButton/index';
 
 function App() {
   return (
@@ -29,7 +30,9 @@ function App() {
         <Route path="/OrderOnline" element={<OrderOnline />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/confirmed-booking" element={<ConfirmationBookingPage />} />
+        <Route path="/OnlineMenu" element={<onlineMenu />} />
       </Routes>
+      <ScrollToTopButton />
       <Footer />
     </BrowserRouter>
   );
