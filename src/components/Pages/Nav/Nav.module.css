@@ -2,6 +2,7 @@ nav {
     display: flex;
     align-items: center; /* Center vertically */
     width: 100%;
+    background-color: #a6b1ac;
 }
 
 .nav ul {
@@ -42,7 +43,7 @@ nav li {
 }
 
 .nav a:hover {
-    color: #555; /* Change color on hover */
+    color: #f4ce14; /* Change color on hover */
 }
 
 

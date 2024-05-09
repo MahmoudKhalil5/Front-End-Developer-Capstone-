@@ -1,3 +1,7 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
 .Main{
     display:flex;
     background-color:#495e57;
@@ -6,7 +10,22 @@
     margin: 0;
     justify-content: center;
 }
+@media (min-width: 768px) {
+    .Main {
+        flex-direction: row; /* Switch to horizontal layout */
+        justify-content: space-between;
+        padding: 2rem; /* Add more padding */
+    }
 
+    .Main img {
+        width: 50%; /* Adjust width */
+        margin-left: 2rem; /* Add space between elements */
+    }
+
+    .content {
+        width: 50%; /* Equal width distribution */
+    }
+}
 .Main img{
     width: 50%;
     height: 450px;
@@ -16,19 +35,40 @@
     box-shadow: 3px 3px 15px rgba(0, 0, 0 , 0.2);
 }
 
-.Main button{
-    background-color: #f4ce14;
+/* .Main button{
     color:#000;
     font-family: "karla", sans-serif;
-    font-weight: 800;
+    font-weight: 800px;
     width:13em;
     height: 3.5em;
     margin:1em;
-    border-radius: 2em;
+    border-radius: 1.5em;
     border: none;
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+} */
+
+/* Button Styles */
+.Mbot {
+    position: relative;
+    display: inline-block; /* Inline block for better alignment */
+    height: 45px; /* Fixed height */
+    padding: 5px 15px; /* Padding for spacing */
+    font-weight: 700; /* Bold font */
+    font-size: 15px; /* Font size */
+    letter-spacing: 2px; /* Additional spacing */
+    text-transform: uppercase; /* Uppercase text */
+    border: 2px solid #383736; /* Border style */
+    border-radius: 15px; /* Rounded corners */
+    background-color: #4c8ff3; /* Default background */
+    color: #000; /* Default text color */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease-in-out; /* Transition effect */
 }
 
+.Mbot:hover {
+    background-color: #f4ce14; /* Background change on hover */
+    color: rgb(51, 50, 50); /* Text color change */
+}
 .contnent{
     margin-left: 7em;
     margin-right:5em;
@@ -78,11 +118,6 @@ h5 {
     color: #000;
     margin-top: -2.5em;
 }
-
-
-button:hover {
-    cursor: pointer;
-}
 .Specials{
     display: flex;
     justify-content: center;
@@ -104,20 +139,26 @@ button:hover {
 }
 
 .Specials button{
-    background-color: #f4ce14;
-    color:#000;
-    font-family: "karla", sans-serif;
-    font-weight: 800;
-    font-size: 60p;
-    width:13em;
-    height: 3.5em;
-    margin:0.5em;
-    border-radius: 2em;
-    border: none;
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
-    margin-left: 150px;
+    position: relative;
+    display: inline-block; /* Inline block for better alignment */
+    height: 45px; /* Fixed height */
+    padding: 5px 15px; /* Padding for spacing */
+    font-weight: 700; /* Bold font */
+    font-size: 15px; /* Font size */
+    letter-spacing: 2px; /* Additional spacing */
+    text-transform: uppercase; /* Uppercase text */
+    border: 2px solid #383736; /* Border style */
+    border-radius: 15px; /* Rounded corners */
+    background-color: #4c8ff3; /* Default background */
+    color: #000; /* Default text color */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease-in-out; /* Transition effect */
 }
 
+.Specials button:hover {
+    background-color: #f4ce14; /* Background change on hover */
+    color: rgb(51, 50, 50); /* Text color change */
+}
 .Cards{
     display: flex;
     justify-content: center;
@@ -126,7 +167,17 @@ button:hover {
     margin-bottom: 1em;
     width: 100%;
 }
+/* For larger screens, adjust to horizontal layout */
+@media (min-width: 768px) {
+    .Cards {
+        flex-direction: row; /* Horizontal layout for larger screens */
+        justify-content: space-evenly; 
+    }
 
+    .Card {
+        width: 18rem;
+    }
+}
 .CardImg{
     width: 95%;
     border-top-left-radius: 10%;
@@ -143,6 +194,7 @@ button:hover {
     margin-top: -3em;
     margin-left: 1em;
     margin-right: 1em;
+    margin-bottom: 3em
 }
 .CBody{
     font-family: "Karla", sans-serif;
@@ -161,7 +213,7 @@ button:hover {
 
 .Btn{
     font-family: "Karla", sans-serif;
-    font-weight: 800;
+    font-weight: 750px;
     font-size: 18px;
     border: none;
 }
@@ -253,6 +305,6 @@ padding: 3em 0;
     height: 60%;
     margin-top: -10em;
     margin-left: 2em;
-    box-shadow: 3px 3px 15pz rgba(0, 0, 0 , 0.2);
+    box-shadow: 3px 3px 15px rgba(0, 0, 0 , 0.2);
     border-radius: 15px;
 }
