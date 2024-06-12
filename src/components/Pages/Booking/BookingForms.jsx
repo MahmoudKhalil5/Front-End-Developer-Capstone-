@@ -9,7 +9,7 @@ function BookingForms({ availableTimes, dispatchOnDateChange, submitData }) {
   const [time, setTime] = useState(defaultTime);
   const [numberOfGuests, setNumberOfGuests] = useState(1);
   const [occasion, setOccasion] = useState('Birthday');
-  
+
   const isDateValid = () => date !== '';
   const isTimeValid = () => time !== '';
   const isNumberOfGuestsValid = () => numberOfGuests >= 1 && numberOfGuests <= 10;
@@ -35,7 +35,7 @@ function BookingForms({ availableTimes, dispatchOnDateChange, submitData }) {
       setOccasion(occasion);
     }
   }, []);
-  
+
     // Function to save form data to local storage
     useEffect(() => {
       localStorage.setItem(
@@ -73,7 +73,7 @@ function BookingForms({ availableTimes, dispatchOnDateChange, submitData }) {
       {/* Time Select */}
       <div className="form-time">
         <label htmlFor="booking-time">Choose time</label>
-        <select 
+        <select
           id="booking-time"
           value={time}
           required
@@ -119,7 +119,7 @@ function BookingForms({ availableTimes, dispatchOnDateChange, submitData }) {
 
       {/* Submit Button */}
       <button 
-        class="fill" 
+        className="fill" 
         type="submit" 
         disabled={!areAllFieldsValid()}
         data-testid="submit-button"
