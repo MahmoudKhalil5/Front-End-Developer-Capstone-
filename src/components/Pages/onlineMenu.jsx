@@ -1,8 +1,8 @@
 import React from "react";
 
-function onlineMenu(){
+function OnlineMenu(){
     return(<div><h3>onlineMenu still not created</h3></div>
         
     );
 }
-export default onlineMenu;
+export default OnlineMenu;

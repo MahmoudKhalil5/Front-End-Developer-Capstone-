@@ -14,6 +14,7 @@ import ConfirmationBookingPage from "./components/Pages/Booking/ConfirmedBooking
 import Booking from './components/Pages/Booking/index'
 import Main from './components/Pages/Home/index'
 import ScrollToTopButton from './components/Pages/ScrollToTopButton/index';
+import OnlineMenu from './components/Pages/OnlineMenu';
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
         <Route path="/OrderOnline" element={<OrderOnline />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/confirmed-booking" element={<ConfirmationBookingPage />} />
-        <Route path="/OnlineMenu" element={<onlineMenu />} />
+        <Route path="/OnlineMenu" element={<OnlineMenu />} />
       </Routes>
       <ScrollToTopButton />
       <Footer />
